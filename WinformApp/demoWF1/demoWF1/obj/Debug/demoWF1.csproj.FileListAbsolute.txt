@@ -1,0 +1,12 @@
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\bin\Debug\demoWF1.exe.config
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\bin\Debug\demoWF1.exe
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\bin\Debug\demoWF1.pdb
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.csproj.AssemblyReference.cache
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.Properties.Resources.resources
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.csproj.GenerateResource.cache
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.csproj.CoreCompileInputs.cache
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.exe
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.pdb
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.Form1.resources
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoWF1\demoWF1\obj\Debug\demoWF1.demoTongHieuTichThuong.resources
