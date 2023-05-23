@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using demoCRUDCategory.Categories;
+using demoCRUDCategory.Products;
 
 namespace demoCRUDCategory
 {
@@ -17,7 +18,7 @@ namespace demoCRUDCategory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CategoryList());
+            Application.Run(new ProductList());
         }
     }
 }
