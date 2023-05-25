@@ -31,17 +31,8 @@ namespace demoCRUDCategory.Products
             ProductGridView.DataSource = dataTable;
         }
 
-        private void btnAddProduct_Click(object sender, EventArgs e)
+        private void GetCategory()
         {
-            tbProductName.Enabled = true;
-            tbProductPrice.Enabled = true;
-            tbProductQuantity.Enabled = true;
-            tbProductDescription.Enabled = true;
-            cbProductCategory.Enabled = true;
-            btnSaveProduct.Enabled = true;
-            btnAddProduct.Enabled = false;
-            
-            //Lấy dữ liệu từ category và đổ vào comboBox
             //Query
             sql = "SELECT * FROM categories";
             //Chạy query
@@ -56,6 +47,20 @@ namespace demoCRUDCategory.Products
             cbProductCategory.DisplayMember = "name";
             //Đổ id của category vào value của các item
             cbProductCategory.ValueMember = "id";
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            tbProductName.Enabled = true;
+            tbProductPrice.Enabled = true;
+            tbProductQuantity.Enabled = true;
+            tbProductDescription.Enabled = true;
+            cbProductCategory.Enabled = true;
+            btnSaveProduct.Enabled = true;
+            btnAddProduct.Enabled = false;
+            
+            //Lấy dữ liệu từ category và đổ vào comboBox
+            GetCategory();
         }
 
         private void btnSaveProduct_Click(object sender, EventArgs e)
@@ -87,6 +92,92 @@ namespace demoCRUDCategory.Products
             cbProductCategory.Enabled = false;
             btnSaveProduct.Enabled = false;
             btnAddProduct.Enabled = true;
+        }
+
+        private void ProductGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Lấy dữ liệu của bản ghi đang được click
+            string ProId = ProductGridView.Rows[e.RowIndex].Cells["id"].Value.ToString();
+            string ProName = ProductGridView.Rows[e.RowIndex].Cells["name"].Value.ToString();
+            string ProPrice = ProductGridView.Rows[e.RowIndex].Cells["price"].Value.ToString();
+            string ProQuantity = ProductGridView.Rows[e.RowIndex].Cells["quantity"].Value.ToString();
+            string ProDescript = ProductGridView.Rows[e.RowIndex].Cells["description"].Value.ToString();
+            string ProCat = ProductGridView.Rows[e.RowIndex].Cells["category_name"].Value.ToString();
+            //Đổ dữ liệu vào ô input
+            tbProductId.Text = ProId;
+            tbProductName.Text = ProName;
+            tbProductPrice.Text = ProPrice;
+            tbProductQuantity.Text = ProQuantity;
+            tbProductDescription.Text = ProDescript;
+            //Đổ dữ liệu của category vào comboBox
+            GetCategory();
+            cbProductCategory.SelectedIndex = cbProductCategory.FindString(ProCat);
+            //Bật button update lên
+            btnUpdateProduct.Enabled = true;
+            tbProductName.Enabled = true;
+            tbProductPrice.Enabled = true;
+            tbProductQuantity.Enabled = true;
+            tbProductDescription.Enabled = true;
+            cbProductCategory.Enabled = true;
+            btnDeleteProduct.Enabled = true;
+        }
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            //Lấy dữ liệu từ các ô input và comboBox
+            string ProId = tbProductId.Text;
+            string ProName = tbProductName.Text;
+            string ProPrice = tbProductPrice.Text;
+            string ProQuantity = tbProductQuantity.Text;
+            string ProDescript = tbProductDescription.Text;
+            string ProCat = cbProductCategory.SelectedValue.ToString();
+            //Query
+            sql = "UPDATE products SET name = '" + ProName + "', price = '" + ProPrice +
+                  "', quantity = '" + ProQuantity + "', description = '" + ProDescript + "', category_id = '" + ProCat + "' WHERE id = '" + ProId + "'";
+            //Tạo command
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            //Mở kết nối
+            connection.Open();
+            //Chạy query
+            command.ExecuteNonQuery();
+            //Đóng kết nối
+            connection.Close();
+            //Hiển thị thông báo
+            MessageBox.Show("Sửa thành công");
+            //Load lại DataGridView
+            ProductList_Load(null, null);
+            tbProductName.Enabled = false;
+            tbProductPrice.Enabled = false;
+            tbProductQuantity.Enabled = false;
+            tbProductDescription.Enabled = false;
+            cbProductCategory.Enabled = false;
+            btnUpdateProduct.Enabled = false;
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            //Lấy id cần xóa
+            string ProId = tbProductId.Text;
+            //Query
+            sql = "DELETE FROM products WHERE id = '" + ProId + "'";
+            //Mở kết nối
+            connection.Open();
+            //Tạo command
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            //Chạy query
+            command.ExecuteNonQuery();
+            //Đóng kết nối
+            connection.Close();
+            //Hiển thị thông báo
+            MessageBox.Show("Xóa thành công");
+            //Load lại DataGridView
+            ProductList_Load(null, null);
+            tbProductName.Enabled = false;
+            tbProductPrice.Enabled = false;
+            tbProductQuantity.Enabled = false;
+            tbProductDescription.Enabled = false;
+            cbProductCategory.Enabled = false;
+            btnDeleteProduct.Enabled = false;
         }
     }
 }

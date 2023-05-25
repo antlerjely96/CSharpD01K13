@@ -36,3 +36,4 @@ C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoCRUDCategory\demoCRUDCa
 C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoCRUDCategory\demoCRUDCategory\obj\Debug\demoCRUDCategory.pdb
 C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoCRUDCategory\demoCRUDCategory\obj\Debug\demoCRUDCategory.Categories.CategoryList.resources
 C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoCRUDCategory\demoCRUDCategory\obj\Debug\demoCRUDCategory.Products.ProductList.resources
+C:\Users\admin\RiderProjects\CSharpD01K13\WinformApp\demoCRUDCategory\demoCRUDCategory\obj\Debug\demoCRUDCategory.TabControlDemo.resources

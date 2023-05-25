@@ -64,6 +64,7 @@ namespace demoCRUDCategory.Products
             this.ProductGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProductGridView.Size = new System.Drawing.Size(1524, 354);
             this.ProductGridView.TabIndex = 0;
+            this.ProductGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductGridView_CellClick);
             // 
             // label1
             // 
@@ -185,6 +186,7 @@ namespace demoCRUDCategory.Products
             this.btnUpdateProduct.TabIndex = 14;
             this.btnUpdateProduct.Text = "Update";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // btnDeleteProduct
             // 
@@ -195,6 +197,7 @@ namespace demoCRUDCategory.Products
             this.btnDeleteProduct.TabIndex = 15;
             this.btnDeleteProduct.Text = "Delete";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // ProductList
             // 
