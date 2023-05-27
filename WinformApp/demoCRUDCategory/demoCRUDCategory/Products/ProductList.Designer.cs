@@ -47,6 +47,9 @@ namespace demoCRUDCategory.Products
             this.btnSaveProduct = new System.Windows.Forms.Button();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@ namespace demoCRUDCategory.Products
             this.ProductGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductGridView.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ProductGridView.Location = new System.Drawing.Point(64, 63);
+            this.ProductGridView.Location = new System.Drawing.Point(47, 205);
             this.ProductGridView.Name = "ProductGridView";
             this.ProductGridView.ReadOnly = true;
             this.ProductGridView.RowTemplate.Height = 40;
@@ -68,7 +71,7 @@ namespace demoCRUDCategory.Products
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(70, 468);
+            this.label1.Location = new System.Drawing.Point(53, 610);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 43);
             this.label1.TabIndex = 1;
@@ -77,14 +80,14 @@ namespace demoCRUDCategory.Products
             // tbProductName
             // 
             this.tbProductName.Enabled = false;
-            this.tbProductName.Location = new System.Drawing.Point(295, 465);
+            this.tbProductName.Location = new System.Drawing.Point(278, 607);
             this.tbProductName.Name = "tbProductName";
             this.tbProductName.Size = new System.Drawing.Size(226, 38);
             this.tbProductName.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(70, 554);
+            this.label2.Location = new System.Drawing.Point(53, 696);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(219, 43);
             this.label2.TabIndex = 3;
@@ -93,14 +96,14 @@ namespace demoCRUDCategory.Products
             // tbProductPrice
             // 
             this.tbProductPrice.Enabled = false;
-            this.tbProductPrice.Location = new System.Drawing.Point(295, 551);
+            this.tbProductPrice.Location = new System.Drawing.Point(278, 693);
             this.tbProductPrice.Name = "tbProductPrice";
             this.tbProductPrice.Size = new System.Drawing.Size(226, 38);
             this.tbProductPrice.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(608, 460);
+            this.label3.Location = new System.Drawing.Point(591, 602);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(266, 43);
             this.label3.TabIndex = 5;
@@ -109,14 +112,14 @@ namespace demoCRUDCategory.Products
             // tbProductQuantity
             // 
             this.tbProductQuantity.Enabled = false;
-            this.tbProductQuantity.Location = new System.Drawing.Point(880, 457);
+            this.tbProductQuantity.Location = new System.Drawing.Point(863, 599);
             this.tbProductQuantity.Name = "tbProductQuantity";
             this.tbProductQuantity.Size = new System.Drawing.Size(226, 38);
             this.tbProductQuantity.TabIndex = 6;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(1195, 457);
+            this.label4.Location = new System.Drawing.Point(1178, 599);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(266, 43);
             this.label4.TabIndex = 7;
@@ -125,7 +128,7 @@ namespace demoCRUDCategory.Products
             // tbProductDescription
             // 
             this.tbProductDescription.Enabled = false;
-            this.tbProductDescription.Location = new System.Drawing.Point(1195, 525);
+            this.tbProductDescription.Location = new System.Drawing.Point(1178, 667);
             this.tbProductDescription.Multiline = true;
             this.tbProductDescription.Name = "tbProductDescription";
             this.tbProductDescription.Size = new System.Drawing.Size(265, 171);
@@ -133,7 +136,7 @@ namespace demoCRUDCategory.Products
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(608, 546);
+            this.label5.Location = new System.Drawing.Point(591, 688);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(266, 43);
             this.label5.TabIndex = 9;
@@ -143,14 +146,14 @@ namespace demoCRUDCategory.Products
             // 
             this.cbProductCategory.Enabled = false;
             this.cbProductCategory.FormattingEnabled = true;
-            this.cbProductCategory.Location = new System.Drawing.Point(880, 543);
+            this.cbProductCategory.Location = new System.Drawing.Point(863, 685);
             this.cbProductCategory.Name = "cbProductCategory";
             this.cbProductCategory.Size = new System.Drawing.Size(224, 39);
             this.cbProductCategory.TabIndex = 10;
             // 
             // tbProductId
             // 
-            this.tbProductId.Location = new System.Drawing.Point(1500, 460);
+            this.tbProductId.Location = new System.Drawing.Point(1483, 602);
             this.tbProductId.Name = "tbProductId";
             this.tbProductId.Size = new System.Drawing.Size(139, 38);
             this.tbProductId.TabIndex = 11;
@@ -158,7 +161,7 @@ namespace demoCRUDCategory.Products
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(79, 638);
+            this.btnAddProduct.Location = new System.Drawing.Point(62, 780);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(194, 58);
             this.btnAddProduct.TabIndex = 12;
@@ -169,7 +172,7 @@ namespace demoCRUDCategory.Products
             // btnSaveProduct
             // 
             this.btnSaveProduct.Enabled = false;
-            this.btnSaveProduct.Location = new System.Drawing.Point(351, 638);
+            this.btnSaveProduct.Location = new System.Drawing.Point(334, 780);
             this.btnSaveProduct.Name = "btnSaveProduct";
             this.btnSaveProduct.Size = new System.Drawing.Size(194, 58);
             this.btnSaveProduct.TabIndex = 13;
@@ -180,7 +183,7 @@ namespace demoCRUDCategory.Products
             // btnUpdateProduct
             // 
             this.btnUpdateProduct.Enabled = false;
-            this.btnUpdateProduct.Location = new System.Drawing.Point(619, 638);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(602, 780);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(194, 58);
             this.btnUpdateProduct.TabIndex = 14;
@@ -191,7 +194,7 @@ namespace demoCRUDCategory.Products
             // btnDeleteProduct
             // 
             this.btnDeleteProduct.Enabled = false;
-            this.btnDeleteProduct.Location = new System.Drawing.Point(880, 638);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(863, 780);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(194, 58);
             this.btnDeleteProduct.TabIndex = 15;
@@ -199,11 +202,39 @@ namespace demoCRUDCategory.Products
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
             this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
+            // tbSearch
+            // 
+            this.tbSearch.Location = new System.Drawing.Point(602, 77);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(471, 38);
+            this.tbSearch.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(374, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(170, 38);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Search";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(1157, 73);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(230, 66);
+            this.btnSearch.TabIndex = 18;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // ProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1651, 844);
+            this.ClientSize = new System.Drawing.Size(1651, 1087);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnUpdateProduct);
             this.Controls.Add(this.btnSaveProduct);
@@ -227,6 +258,10 @@ namespace demoCRUDCategory.Products
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnSearch;
 
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnSaveProduct;

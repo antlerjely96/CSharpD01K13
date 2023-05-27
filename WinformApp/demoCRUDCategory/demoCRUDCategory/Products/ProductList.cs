@@ -11,6 +11,7 @@ namespace demoCRUDCategory.Products
         private static string connectionString = "server = localhost; user id = root; password = ; database = d01k13csharp";
         private MySqlConnection connection = new MySqlConnection(connectionString);
         private string sql;
+        private string search = "";
         
         public ProductList()
         {
@@ -21,7 +22,7 @@ namespace demoCRUDCategory.Products
         private void ProductList_Load(object sender, EventArgs e)
         {
             //Query
-            sql = "SELECT products.id, products.name, products.price, products.quantity, products.description, categories.name AS category_name FROM products INNER JOIN categories ON products.category_id = categories.id";
+            sql = "SELECT products.id, products.name, products.price, products.quantity, products.description, categories.name AS category_name FROM products INNER JOIN categories ON products.category_id = categories.id WHERE products.name LIKE '%" + search + "%' ";
             //Chạy query
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, connection);
             //Tạo dataTable và đổ dữ liệu lấy đc từ query vào
@@ -178,6 +179,13 @@ namespace demoCRUDCategory.Products
             tbProductDescription.Enabled = false;
             cbProductCategory.Enabled = false;
             btnDeleteProduct.Enabled = false;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            //Lấy dư liệu ở ô search
+            search = tbSearch.Text;
+            ProductList_Load(null, null);
         }
     }
 }

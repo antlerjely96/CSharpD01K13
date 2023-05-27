@@ -18,7 +18,7 @@ namespace demoCRUDCategory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TabControlDemo());
+            Application.Run(new ProductList());
         }
     }
 }
